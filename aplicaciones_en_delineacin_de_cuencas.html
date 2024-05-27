@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_lightbox.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Aplicaciones en delineación de cuencas </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Elia Quirós" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_lightbox.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-40"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header"  style="background-image: url(Imagen_2.png); background-repeat: repeat-x;"><div id="headerContent"></div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Tema 4</a></li>
+   <li id="active"><a href="aplicaciones_en_delineacin_de_cuencas.html" class="active daddy">Aplicaciones en delineación de cuencas</a>
+   <ul>
+      <li><a href="prctica_delineacin_de_cuencas.html" class="no-ch">Práctica delineación de cuencas</a></li>
+   </ul>
+   </li>
+   <li><a href="aplicaciones_de_la_teledeteccin_en_eventos_de_inundacin.html" class="daddy">Aplicaciones de la teledetección en eventos de inundación</a>
+   <ul class="other-section">
+      <li><a href="prctica_evaluacin_inundacin.html" class="no-ch">Práctica Evaluación inundación</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_delineacin_de_cuencas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Aplicaciones en delineación de cuencas</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id130">
+<div class="iDevice emphasis0" >
+<div id="ta130_129_2" class="block iDevice_content">
+<div class="exe-text"><p>Recordemos que las operaciones focales son operaciones en las que el valor de una celda en un nuevo ráster es función de los valores de las celdas vecinas en el ráster fuente.</p>
+<p>La vecindad más inmediata es la de 3x3, es decir, una matriz de tres filas y tres columnas centrada sobre la celda a analizar, pero pueden ser de dimensión impar y valores 5x5, 7x7...</p>
+<p><img src="convolucion.jpg" alt="" width="818" height="400" /></p>
+<p></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_tool" id="id131">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_tool.png)"><h1 class="iDeviceTitle">Análisis de cuencas de drenaje</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta131_124_2" class="block iDevice_content">
+<div class="exe-text"><div class="exe-fx exe-tabs">
+<h2>Análisis de cuencas de drenaje</h2>
+<p>Sobre el mapa de pendientes, se puede determinar hacia qué celda, de las 8 vecinas, vierte el agua de lluvia que cae sobre una celda dada.</p>
+<p><img src="m1_img4.png" width="405" height="355" alt="" /></p>
+<p>Esta operación debe realizarse para cada celda, de manera que finalmente se puede conocer la dirección del flujo en todas las celdas del mapa. </p>
+<p>Una vez finalizado el proceso, el SIG puede deteminar qué celdas vierten el agua de escorrentía hacia una celda y delimitar las cuencas de drenaje. También se puede calcular el flujo acumulado sobre una celda dada en función de la cantidad de agua que aportan las celdas que directa o indirectamente vierten sobre ella.</p>
+<p><img src="img5.1.png" width="341" height="301" alt="" /></p>
+<p>En un SIG, los pasos a seguir son los siguientes: </p>
+<ol>
+<li><a class="exe-dialog-link" rel="lightbox" href="#t2a20ee13-133f-469d-ee7f-562c7c1e0f6f" id="link2a20ee13-133f-469d-ee7f-562c7c1e0f6f"><strong>Preprocesamiento MDE</strong></a>: llenado de pozos, asegurando que los sumideros espurios no rompieran la continuidad de las líneas de flujo.</li>
+<li><strong><a class="exe-dialog-link" rel="lightbox" href="#t6061c6c1-50c7-bbe9-43da-705c410fe4b8" id="link6061c6c1-50c7-bbe9-43da-705c410fe4b8">Dirección del flujo</a>:</strong> a través de D8 o D∞ </li>
+<li><strong><a class="exe-dialog-link" rel="lightbox" href="#t323394e6-1ba5-8f8c-9c90-99a890af1548" id="link323394e6-1ba5-8f8c-9c90-99a890af1548">Acumulación de flujo</a>:</strong> una estimación de la superficie de la cuenca hidrográfica pendiente ascendente para cada celda DEM.</li>
+<li><strong><a class="exe-dialog-link" rel="lightbox" href="#t21e0745c-d1ff-561d-d911-296de338f9d7" id="link21e0745c-d1ff-561d-d911-296de338f9d7">Extracción de líneas de corriente</a>:</strong> definición de un valor umbral de flujo del área de la cuenca hidrográfica de pendiente ascendente.</li>
+</ol>
+<p>Conviene destacar que existen diferencias de los resultados obtenidos, fundamentalmente por los diferentes algoritmos de dirección de flujo</p>
+<p><img src="img11.1.png" width="537" height="460" alt="" /></p>
+<p></p>
+</div>
+<p></p>
+<div id="t76bac15b-b78c-8731-4236-72a70431d892" class="exe-dialog-text js-hidden">
+<p><strong>Modelo Digital de Elevaciones</strong>.</p>
+<p>Es un ráster en el que se representa la altitud media del terreno en cada celda o píxel.</p>
+</div>
+<div id="t3622fb81-66d5-35f7-55df-802ce1348084" class="exe-dialog-text js-hidden">
+<p>Ángulo desde el norte medido en dirección de las agujas del reloj</p>
+</div>
+<div id="tc4c06649-2a07-2dab-4c92-77b45e276415" class="exe-dialog-text js-hidden">
+<p>También conocido como hillshade</p>
+</div>
+<div id="t2a20ee13-133f-469d-ee7f-562c7c1e0f6f" class="exe-dialog-text js-hidden">
+<p>Los dos principales problemas que se encuentran a la hora de realizar un análisis de flujo superficial son los problemas matemáticos que se plantean en:</p>
+<p><strong>Zonas llanas</strong>: con cero pendientes del terreno.</p>
+<p><strong>Sumideros</strong>: con pendientes negativas al intentar salir del socavón.</p>
+<p><img src="img6.1.png" width="303" height="280" alt="" /></p>
+</div>
+<div id="t6061c6c1-50c7-bbe9-43da-705c410fe4b8" class="exe-dialog-text js-hidden">
+<p>Por lo general, se utilizan dos algoritmos principales en (SIG):</p>
+<p><strong>D8:</strong> El flujo va desde el centro de una celda hasta el centro de una celda circundante. Por lo tanto, las direcciones de flujo están restringidas a múltiples ángulos de 45°. El proceso de cálculo de la dirección del flujo es simple, requiriendo solo el cálculo de una pendiente promedio entre la celda central y las 8 celdas circundantes, con el flujo moviéndose hacia la que tiene la pendiente más pronunciada. Es un <strong>flujo unidimensional</strong>.</p>
+<p><img src="m1_img4.png" width="280" height="245" alt="" /></p>
+<p><strong>D ∞:</strong> El flujo va desde el centro de una celda hasta los centros de dos celdas adyacentes. Determina la dirección del flujo como la pendiente descendente más pronunciada en ocho facetas triangulares formadas en una ventana de celda de 3x3 centrada en la celda de interés.</p>
+<p>La salida de dirección de flujo es un ráster de punto flotante representado como un solo ángulo en grados que va en sentido contrario a las agujas del reloj desde 0 (hacia el este) hasta 360 (de nuevo hacia el este). Considera un <strong>flujo bidimensional</strong>.</p>
+<p><img src="img8.1.png" width="945" height="715" alt="" /></p>
+<p></p>
+<div id="t323394e6-1ba5-8f8c-9c90-99a890af1548" class="exe-dialog-text js-hidden" style="background-image: url('../img/modalwindow_bg.png');">
+<p>La acumulación de flujo analiza el conjunto de celdas conectadas hidrológicamente a una celda y aguas arriba de ella. Para cualquier célula dada, su flujo será desplazado por la gravedad a una (SFD) o más (MFD) de sus células vecinas. Estas células que reciben el flujo a su vez lo desplazarán a las células que están debajo de ellas, y así sucesivamente. El área acumulada de una celda en particular representa el área total de aquellas celdas cuyos flujos eventualmente pasarán a través de ella.</p>
+<p><img src="img9.png" width="800" height="419" alt="" /></p>
+</div>
+</div>
+<div id="t21e0745c-d1ff-561d-d911-296de338f9d7" class="exe-dialog-text js-hidden">
+<p><img src="img10.1.png" width="519" height="512" alt="" /></p>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_delineacin_de_cuencas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<footer id="siteFooter">Universidad de Extremadura</footer></div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
